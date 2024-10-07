@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "71784be6-b77d-41ac-9615-f2dd39ff2707",
+		"name": "MovieBooking -  API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Amy\",\r\n    \"email\":\"john.amy@example.com\",\r\n    \"loginId\":\"johnamy\",\r\n    \"password\":\"password123\",\r\n    \"contactNumber\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/moviebooking/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"john.amy@example.com\",\r\n    \"password\":\"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/moviebooking/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\":\"Robo\",\r\n    \"totalTickets\":4,\r\n    \"theatreName\":\"Asian\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/moviebooking/movies/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movies",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Robo\",\r\n    \"totalTickets\": 4,\r\n    \"theatreName\": \"Asian\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/moviebooking/movies/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"moviebooking",
+						"movies",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\":\"Robo\",\r\n    \"theatreName\":\"Asian\",\r\n    \"ticketsBooked\":2,\r\n    \"seatNumber\":\"A\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000//api/v1.0/tickets/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"",
+						"api",
+						"v1.0",
+						"tickets",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gettickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\":\"Robo\",\r\n    \"theatreName\":\"Asian\",\r\n    \"ticketsBooked\":2,\r\n    \"seatNumber\":\"A\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1.0/tickets/getTickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1.0",
+						"tickets",
+						"getTickets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
